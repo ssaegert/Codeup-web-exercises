@@ -27,26 +27,25 @@
                 <textarea id="bio" name="Bio" placeholder="Tell Us About Yourself" rows="8" cols="40"></textarea>
             </div>
             <div class="form_pad">
-                <label for="source">How did you hear about us?</label>
+                How did you hear about us?
                 <br>
-                <input type="radio" id="source" name="Source" value="billboard">Billboard
+                <input title="billboard" type="checkbox" id="source1" name="Source" value="billboard">Billboard
                 <br>
-                <input type="radio" id="source" name="Source" value="radio">Radio Advertisement
+                <input title="radio" type="checkbox" id="source2" name="Source" value="radio">Radio Advertisement
                 <br>
-                <input type="radio" id="source" name="Source" value="internet">Internet Advertisement
+                <input title="internet" type="checkbox" id="source3" name="Source" value="internet">Internet Advertisement
                 <br>
-                <input type="radio" id="source" name="Source" value="other"> Other
+                <input title="other" type="checkbox" id="source4" name="Source" value="other"> Other
             </div>
             <div class="form_pad">
-                <label for="browser">What browser(s) do you use</label>
+                What browser(s) do you use
                 <br>
-                <input type="checkbox" name="Browser" id="browser" value="chrome">Chrome
-                <br>
-                <input type="checkbox" name="Browser" id="browser" value="safari">Safaribr
-                <br>
-                <input type="checkbox" name="Browser" id="browser" value="firefox">Firefox
-                <br>
-                <input type="checkbox" name="Browser" id="browser" value="explorer">Internet Explorer
+                <select title="browser" name="browser" id="browser">
+                    <option title="chrome" name="Browser" id="browser1" value="chrome">Chrome</option>
+                    <option title="safari" name="Browser" id="browser2" value="safari">Safari</option>
+                    <option title="firefox" name="Browser" id="browser3" value="firefox">Firefox</option>
+                    <option title="explorer" name="Browser" id="browser4" value="explorer">Internet Explorer</option>
+                </select>
             </div>
             <button type="submit">Sign Up</button>
         </form>

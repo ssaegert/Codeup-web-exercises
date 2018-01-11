@@ -3,53 +3,145 @@
     <head>
         <meta charset="UTF-8">
         <title>Register Now!</title>
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet">
         <style>
+            .body-wrapper{
+                width: 80%;
+                padding-left: 10%;
+                padding-right: 10%;
+            }
             .form_pad {
                 padding-bottom: 15px;
             }
+            h1 {
+                font-family: Ubuntu;
+                font-weight: 700;
+                font-weight: bold;
+                font-size: 55px;
+                background: linear-gradient(#4fabec, #0079c0);
+                padding-left: 50px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                color: #fff;
+                text-align: center;
+                border-radius: 50px;
+            }
+            h3 {
+                font-family: Ubuntu;
+                font-weight: bold;
+                font-size: 18px;
+                color: #24454c;
+            }
+
+            .wrapper {
+                float: left;
+                width: 400px;
+                height: 350px;
+            }
+            .wrapper-bot {
+                float: left;
+                width: 400px;
+                height: 200px;
+            }
+            input::-webkit-input-placeholder{
+                color: #E0E0E0;
+            }
+            input[type=text] {
+                width: 90%;
+                padding: 9px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 2px solid #def2f3;
+                border-radius: 8px;
+                font-family: Ubuntu;
+                font-size: 16px;
+            }
+            input[type=email] {
+                width: 90%;
+                padding: 9px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 2px solid #def2f3;
+                border-radius: 8px;
+                font-size: 16px;
+            }
+            input[type=date] {
+                width: 90%;
+                padding: 9px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 2px solid #def2f3;
+                border-radius: 8px;
+                color: #E0E0E0;
+                font-size: 16px;
+            }
+            label {
+                font-family: Ubuntu;
+                font-size: 18px;
+                color: #24454c;
+            }
+            img {
+                border: 0px;
+                border-color: #fff;
+            }
+            button {
+                border: 0px;
+                border-color: #fff;
+                margin-left: -10px;
+            }
+
         </style>
     </head>
     <body>
-    <h1>Register</h1>
+    <div class="body-wrapper">
+    <h1>REGISTER FOR FREE!</h1>
     <p><em>*requied field</em></p>
-        <form action="https://hookb.in/ZV8Obxod" method="post">
-            <div class="form_pad">
-                <label for="first-name">*First Name</label>
-                <br>
-                <input type="text" name="first-name" id="first-name" autofocus="autofocus" placeholder="First Name" required>
+        <form action="https://hookb.in/ZYA3Xy64" method="post">
+            <div class="wrapper">
+                <div class="form_pad">
+                    <label for="first-name">*First Name</label>
+                    <br>
+                    <input type="text" name="first-name" id="first-name" autofocus="autofocus" placeholder="First Name" required>
+                </div>
+                <div class="form_pad">
+                    <label for="last-name">*Last Name</label>
+                    <br>
+                    <input type="text" name="last-name" id="last-name" placeholder="Last Name Here" required>
+                </div>
+                <div class="form_pad">
+                    <label for="middle-name">Middle Name</label>
+                    <br>
+                    <input type="text" name="middle-name" id="middle-name" placeholder="Middle Name Here">
+                </div>
+                <div class="form_pad">
+                    <label for="email">*Your Email</label>
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="Your Email Here" required>
+                </div>
             </div>
-            <div class="form_pad">
-                <label for="last-name">*Last Name</label>
-                <br>
-                <input type="text" name="last-name" id="last-name" placeholder="Last Name Here" required>
+            <div class="wrapper">
+                <div class="form_pad">
+                    <label for="bday">*Birthday</label>
+                    <br>
+                    <input type="date" name="bday" id="bday" placeholder="Birthday Here" required>
+                </div>
+                <div class="form_pad">
+                    <label for="username">*Username</label>
+                    <br>
+                    <input type="text" name="username" id="username" placeholder="Username Here" required>
+                </div>
+                <div class="form_pad">
+                    <label for="password">*Password</label>
+                    <br>
+                    <input type="text" name="password" id="password" placeholder="Your Password Here" required>
+                </div>
             </div>
-            <div class="form_pad">
-                <label for="middle-name">Middle Name</label>
-                <br>
-                <input type="text" name="middle-name" id="middle-name" placeholder="Middle Name Here">
-            </div>
-            <div class="form_pad">
-                <label for="email">*Your Email</label>
-                <br>
-                <input type="email" name="email" id="email" placeholder="Your Email Here" required>
-            </div>
-            <div class="form_pad">
-                <label for="username">*Username</label>
-                <br>
-                <input type="text" name="username" id="username" placeholder="Username Here" required>
-            </div>
-            <div class="form_pad">
-                <label for="password">*Password</label>
-                <br>
-                <input type="text" name="password" id="password" placeholder="Your Password Here" required>
-            </div>
-            <div class="form_pad">
-                <label for="bday">*Birthday</label>
-                <br>
-                <input type="date" name="bday" id="bday" placeholder="Birthday Here" required>
-            </div>
-            <div class="form_pad">
-                What operating systems do you use?
+            <div style="clear: both;"></div>
+            <hr>
+            <div class="wrapper-bot">
+                <div class="form_pad">
+                    <h3>What operating systems do you use?</h3>
                 <br>
                 <label for="os1">
                     <input type="checkbox" id="os1" name="os" value="OS X">OS X
@@ -70,9 +162,11 @@
                 <label for="os5">
                     <input type="checkbox" id="os5" name="os" value="Chrome OS"> Chrome OS
                 </label>
+                </div>
             </div>
-            <div class="form_pad">
-                What programming languages do you know?
+            <div class="wrapper-bot">
+                <div class="form_pad">
+                    <h3>What programming languages do you know?</h3>
                 <br>
                 <label for="program1">
                     <input type="checkbox" id="program1" name="program" value="HTML">HTML
@@ -93,8 +187,11 @@
                 <label for="program5">
                     <input type="checkbox" id="program5" name="program" value="C+"> C+
                 </label>
+                </div>
             </div>
-            <button type="submit">Register</button>
+            <div style="clear: both;"></div>
+            <button type="submit"><img src="images/register.jpg" alt=""></button>
         </form>
+    </div>
     </body>
 </html>

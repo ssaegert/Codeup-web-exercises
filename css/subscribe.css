@@ -1,0 +1,67 @@
+.form_pad {
+    padding-bottom: 15px;
+}
+.newsletter{
+    width: 361px;
+    height: 250px;
+    float: left;
+    margin-right: 15px;
+}
+.news-form{
+    float: left;
+    margin-top: 20px;
+    width: 350px;
+    height: 250px;
+
+}
+.wrapper {
+width: 737px;
+    margin-right: auto;
+    margin-left: auto;
+}
+input[type=text] {
+    width: 90%;
+    padding: 9px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #def2f3;
+    border-radius: 8px;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+}
+input[type=email] {
+    width: 90%;
+    padding: 9px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #def2f3;
+    border-radius: 8px;
+    font-size: 16px;
+}
+label {
+    font-family: helvetica, sans-serif;
+    font-size: 18px;
+    color: #24454c;
+}
+h3 {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #24454c;
+    margin: 0;
+}
+button {
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    background: linear-gradient(#eee, #999);
+    font-size: 28px;
+    color: #666;
+}
+body {
+    /*background-color: #999;*/
+    background-image: url("../images/clouds.jpg");
+    background-repeat: no-repeat;
+    background-attatchment:fixed;
+    font-family: Helvetica;
+}

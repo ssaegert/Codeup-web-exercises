@@ -1,0 +1,61 @@
+body {
+
+}
+input::-webkit-input-placeholder{
+    color: #E0E0E0;
+}
+textarea::-webkit-input-placeholder{
+    color: #E0E0E0;
+}
+input[type=text] {
+    width: 100%;
+    padding: 9px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: Ubuntu, sans-serif;
+    font-size: 16px;
+}
+input[type=file] {
+
+}
+h1 {
+    font-family: Impact, sans-serif;
+    border-bottom: 2px solid #ccc;
+    color: #666;
+}
+label {
+    font-family: Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+}
+textarea {
+    width: 99%;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    font-family: Ubuntu, sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.upload{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #999;
+    width: 97%;
+    color: #fff;
+}
+button {
+    width: 350px;
+    height: 60px;
+    border-radius: 8px;
+    background: linear-gradient(#eee, #999);
+    font-size: 45px;
+    color: #666;
+
+
+}

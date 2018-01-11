@@ -1,3 +1,21 @@
 .fancy-header {
+    text-align: center;
+}
+h1, h2 {
+    text-decoration: underline;
     color: purple;
+
+}
+body {
+    /*background-color: #999;*/
+    background-image: url("../images/light-blue-background.jpg");
+    background-repeat: no-repeat;
+    background-attatchment:fixed;
+    font-family: Avenir;
+}
+ul {
+    list-style-type: square;
+}
+td {
+    padding: 25px;
 }

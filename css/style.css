@@ -8,8 +8,8 @@ h1, h2 {
 }
 body {
     /*background-color: #999;*/
-    background-image: url("../images/light-blue-background.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../images/clouds.jpg");
+    background-repeat: repeat-y;
     background-attatchment:fixed;
     font-family: Avenir;
 }

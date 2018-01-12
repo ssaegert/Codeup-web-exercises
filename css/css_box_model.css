@@ -1,0 +1,42 @@
+h1{
+    text-decoration: underline;
+    font-family: Serif;
+    font-weight: bold;
+    color: purple;
+}
+.box {
+    width: 150px;
+    height: 50px;
+    border: solid black 1px;
+    padding: 10px;
+}
+.red{
+    color: white;
+    background-color: red;
+    margin: 0 0 10px 0;
+}
+.orange {
+    color: white;
+    background-color: orange;
+    margin: 0 0 10px 30px;
+}
+.yellow {
+    color: white;
+    background-color: yellow;
+    margin: 0 0 10px 60px;
+}
+.green {
+ color: white;
+    margin: 0 0 10px 90px;
+    background-color: green;
+}
+.blue {
+    color: white;
+    margin: 0 0 10px 120px;
+    background-color: blue;
+}
+.violet {
+    color: white;
+    margin: 0 0 10px 150px;
+    background-color: violet;
+}

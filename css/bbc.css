@@ -1,0 +1,140 @@
+body {
+    margin: -15px 0 0 0;
+    font-family: Avenir, sans-serif;
+}
+header {
+    height: 150px;
+    width: 100%;
+}
+h1 {
+    color: #fff;
+    font-size: 45px;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 70px;
+    margin-top: 0;
+}
+h2 {
+    color: #9b2821;
+    font-size: 24px;
+    padding: 0 0 0 0;
+
+}
+p {
+    font-size: 14px;
+}
+hr {
+    border: 1px solid #ddd;
+}
+.header-top {
+    width: 1000px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.page-title-bg {
+    width: 100%;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ac2d25;
+}
+.page-title {
+    width: 1000px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sub-nav-bg {
+    width: 100%;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #9b2821;
+}
+.sub-nav {
+    width: 1000px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo {
+    width: 84px;
+    height: 32px;
+    padding-top: 8px;
+    float: left;
+}
+.sign-in {
+    width: 150px;
+    height: 40px;
+    float: left;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 40px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    margin: 0 0 0 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.menu li{
+    text-align: left;
+    vertical-align: middle;
+    line-height: 40px;
+    border-right: 1px solid #ddd;
+    float: left;
+    list-style-type: none;
+    padding: 0 10px 0 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+li i {
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 80px;
+}
+i {
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 3px;
+    float: right;
+    margin-top: 7px;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.main {
+    width: 100%;
+}
+.content {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.big-link {
+    width: 100%;
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    padding: 5px 0 5px 0;
+}
+.right{
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+}
+.foot-top {
+    height: 125px;
+    width: 100%;
+    color: #ddd;
+
+}
+.foot-bot {
+    height: 400px;
+    width: 100%;
+    color: #333;
+}

@@ -13,49 +13,35 @@ h1{
     height: 50px;
     border: solid black 1px;
     padding: 10px;
+    float: left;
+    position: relative;
+    color: white;
 }
 .red{
-    color: white;
     background-color: red;
     margin: 0 50px 50px 10px;
-    float: left;
-    position: relative;
+
 }
 .orange {
-    color: white;
     background-color: orange;
     margin: 0 50px 50px 0;
-    float: left;
-    position: relative;
 }
 .yellow {
-    color: white;
     background-color: yellow;
     margin: 0 0 50px 0;
-    float: left;
-    position: relative;
 }
 .green {
-    color: white;
     margin: 0 50px 10px 10px;
     background-color: green;
     clear: both;
-    float: left;
-    position: relative;
 }
 .blue {
-    color: white;
     margin: 0 50px 10px 0;
     background-color: blue;
-    float: left;
-    position: relative;
 }
 .violet {
-    color: white;
     margin: 0 0 10px 0;
     background-color: violet;
-    float: left;
-    position: relative;
 }
 .arrow {
     width: 58px;

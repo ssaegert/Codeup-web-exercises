@@ -1,7 +1,14 @@
+body {
+    padding: 30px;
+}
 h1 {
     text-align: center;
+    font-family: Avenir, sans-serif;
+    color: #24454c;
 }
-
+h2 {
+    color: #24454c;
+}
 ul {
     width: 100%;
     margin: 0;
@@ -17,6 +24,16 @@ li {
     line-height: 30px;
     background-color: #ccc;
     list-style-type: none;
+    font-family: Avenir, sans-serif;
+    text-decoration: none;
+    font-weight: bolder;
+    border-radius: 30px;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: cadetblue;
 }
 .header-img {
     width: 100%;
@@ -53,13 +70,21 @@ footer {
     text-align: center;
     vertical-align: middle;
     line-height: 40px;
+    border-radius: 30px;
+}
+.main {
+    font-family: Avenir, sans-serif;
+}
+.sub-section {
+    font-family: Avenir, sans-serif;
 }
 @media screen and (min-width: 500px)  {
     .alert-info { display: none; }
     h1 { text-align: left;
-        width: 35%;
+        width: 30%;
         margin: 0;
         display: inline-block;
+        font-family: Avenir, sans-serif;
     }
     li {
         width: 40px;
@@ -84,7 +109,7 @@ footer {
         margin: 0;
         padding: 0;
         float: right;
-        width: 65%;
+        width: 70%;
         height: 32px;
     }
     .header-img {

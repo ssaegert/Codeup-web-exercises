@@ -1,0 +1,41 @@
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row {
+    content: "";
+    clear: both;
+    box-sizing: border-box;
+}
+.col-lg,
+.col-md,
+.col-sm,
+.col-xs {
+    box-sizing: border-box;
+    background-color: #DDD;
+    width: 100%;
+    height: 3em;
+    border: .01em solid black;
+    padding-left: 1em;
+    vertical-align: middle;
+    float: left;
+    margin-bottom: 1em;
+    line-height: 3em;
+    font-size: 1em;
+}
+@media screen and (min-width: 500px) {
+    .col-lg {
+        width: 50%;
+    }
+    .col-md {
+        width: 33.33%;
+    }
+    .col-sm {
+        width: 25%;
+    }
+    .col-xs {
+        width: 12.5%;
+    }
+}

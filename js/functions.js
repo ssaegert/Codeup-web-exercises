@@ -12,7 +12,7 @@ function sayHello(name) {
     return "Hello" + " " + name;
 }
  var message = sayHello (myName);
-
+console.log(message);
 
 /**
  * TODO:
@@ -21,8 +21,8 @@ function sayHello(name) {
  *
  * console.log 'helloMessage' to check your work
  */
-var helloMessage = sayHello ("Scott")
-
+var helloMessage = sayHello ("Scott");
+console.log(helloMessage);
 
 /**
  * TODO:
@@ -30,14 +30,14 @@ var helloMessage = sayHello ("Scott")
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-var myName = "Scott"
-var message = sayHello (myName);
-
+var myName = "Scott";
+var newMessage = sayHello (myName);
+console.log(newMessage);
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
-
+// var random = Math.ceil(Math.random() * 3);
 /**
  * TODO:
  * Create a function called 'isTwo' that takes a number as a parameter.
@@ -56,8 +56,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 function isTwo(x) {
-    var result =  x == 2;
-    return result;
+    return x == 2;
 }
 var answer = isTwo(random);
 console.log(answer);
@@ -68,6 +67,7 @@ console.log(answer);
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
  * restaurant. The function should accept a tip percentage and the total of the
  * bill, and return the amount to tip
+ *
  *
  * Examples:
  * > calculateTip(0.20, 20) // returns 4

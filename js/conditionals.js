@@ -27,7 +27,7 @@ if(isNumber(myNumber)) {
         alert("This is an odd number");
         alert("your number plus 100 is " + (parseFloat(myNumber) + 100));
     } else {
-        alert("This is an even number")
+        alert("This is an even number");
         alert("your number plus 100 is " + (parseFloat(myNumber) + 100));
     }
     if (myNumber > 0) {

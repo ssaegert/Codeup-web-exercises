@@ -81,6 +81,12 @@ console.log("It is " + isBoolean(whatTypeIsThis) + " that " + whatTypeIsThis + "
 
 
 // Make a function named isTrue(boolean)
+function isTrue(boolean){
+    var boolean == true;
+    return trueOrFalse;
+}
+var
+
 // Make a function named isFalse(boolean)
 // Make a function named isTruthy(input)
 // Make a function named isFalsy(input)

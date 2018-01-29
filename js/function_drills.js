@@ -32,16 +32,54 @@ console.log(allUpperCase);
 
 // Make a function named identity(input) that returns the input exactly as provided.
 function identity(input) {
-    return "I am JavaScript"
+    return "I am JavaScript";
 }
 var noIamNot = identity("Just Kidding");
-console.log(noIamNot)
+console.log(noIamNot);
 
 //     Make a function named isOdd(number)
+function isOdd(number) {
+    oddCheck = number % 2;
+    return oddCheck > 0;
+}
+var isThisOdd = 3;
+console.log("It is " + isOdd(isThisOdd) + " that " + isThisOdd + " is an odd number.");
+
+
 // Make a function named isEven(number)
+function isEven(number){
+    evenCheck = number % 2;
+    return evenCheck <= 0;
+}
+var isThisEven = 3;
+console.log("It is " + isEven(isThisEven) + " that " + isThisEven + " is an even number.");
+
+
 // Make a function named isPositive(number)
+function isPositive(number){
+    return number > 0;
+}
+var isThisPostive = 3
+console.log("It is " + isPositive(isThisPostive) + " that " + isThisPostive + " is a positive number.");
+
+
 // Make a function named isNegative(number)
+function isNegative(number) {
+    return number < 0;
+}
+var  isThisNegative = 3;
+console.log("It is " + isNegative(isThisNegative) + " that " + isThisNegative + " is a negative number.");
+
+
 // Make a function named isBoolean(input)
+function isBoolean(input){
+    var whatType = typeof input;
+    return whatType === "boolean";
+}
+var whatTypeIsThis = 42;
+console.log("It is " + isBoolean(whatTypeIsThis) + " that " + whatTypeIsThis + " is a boolean.")
+
+
 // Make a function named isTrue(boolean)
 // Make a function named isFalse(boolean)
 // Make a function named isTruthy(input)

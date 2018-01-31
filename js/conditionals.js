@@ -17,27 +17,55 @@
  */
 
 var number = confirm("would you like to enter a number?");
-var myNumber = prompt("Enter your number");
-function isNumber(myNumber) {
-    return !isNaN(myNumber);
+if (number) {
+    number = prompt("Enter your number");
 }
-
-if(isNumber(myNumber)) {
-    if (myNumber === 0) {
+// var myNumber; = prompt("Enter your number");
+function isNumber(number){
+    return !isNaN(number);
+}
+if(isNumber(number)) {
+    if (myNumber % 2 == 0) {
         alert("This is an even number");
-        alert("your number plus 100 is " + (parseFloat(myNumber) + 100));
+        alert("your number plus 100 is " + (parseFloat(number) + 100));
     } else {
         alert("This is an odd number");
-        alert("your number plus 100 is " + (parseFloat(myNumber) + 100));
+        alert("your number plus 100 is " + (parseFloat(number) + 100));
     }
-    if (myNumber > 0) {
-        alert(myNumber + " is a positive number.");
+    if (number > 0) {
+        alert(number + " is a positive number.");
     } else {
-        alert(myNumber + " is a negative number.");
+        alert(number + " is a negative number.");
     }
 } else {
     alert("This is not a number!")
 }
+
+// var number = confirm("would you like to enter a number?");
+// if (number) {
+//     myNumber = prompt("Enter your number");
+// }
+// // var myNumber; = prompt("Enter your number");
+// var myNumber;
+// function isNumber(myNumber) {
+//     return !isNaN(myNumber);
+// }
+// if(isNumber(myNumber)) {
+//     if (myNumber % 2 == 0) {
+//         alert("This is an even number");
+//         alert("your number plus 100 is " + (parseFloat(myNumber) + 100));
+//     } else {
+//         alert("This is an odd number");
+//         alert("your number plus 100 is " + (parseFloat(myNumber) + 100));
+//     }
+//     if (myNumber > 0) {
+//         alert(myNumber + " is a positive number.");
+//     } else {
+//         alert(myNumber + " is a negative number.");
+//     }
+// } else {
+//     alert("This is not a number!")
+// }
 
 
 
@@ -81,23 +109,26 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 var myRandomColor = randomColor;
 console.log("My random color is " + myRandomColor);
-if (myRandomColor === 'red') {
-    alert("Red like lava")
-} else if (randomColor === 'orange') {
-    alert("Orange like the fruit")
-} else if (randomColor === 'yellow') {
-    alert("Yellow like the sun")
-} else if (randomColor === 'green') {
-    alert("Green like the grass")
-} else if (randomColor === 'blue') {
-    alert("Blue like the ocean")
-} else if (randomColor === 'indigo') {
-    alert("Indigo like the band")
-} else if (randomColor === 'violet') {
-    alert("Violet like the something violet")
+function analyzeColor(myRandomColor){
+    var message;
+    if (myRandomColor === 'red') {
+        message = "Red like lava"
+    } else if (randomColor === 'orange') {
+        message = "Orange like the fruit"
+    } else if (randomColor === 'yellow') {
+        message = "Yellow like the sun"
+    } else if (randomColor === 'green') {
+        message = "Green like the grass"
+    } else if (randomColor === 'blue') {
+        message = "Blue like the ocean"
+    } else if (randomColor === 'indigo') {
+        message = "Indigo like the band"
+    } else if (randomColor === 'violet') {
+        message = "Violet like the something violet"
+    }
+    return message;
 }
-
-
+message = alert(message);
 
 
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];

@@ -26,7 +26,7 @@
      * array.
      */
         for (var i = 0; i < names.length; i++) {
-            console.log(names[i])
+            console.log(names[i]);
         }
     /**
      * TODO:
@@ -53,17 +53,17 @@
     function first(input){
         return input[0];
     }
-    console.log(first([1, 2, 3, 4, 5]))
+    console.log(first([1, 2, 3, 4, 5]));
 
     function second(input){
         return input[1];
     }
-    console.log(second([1, 2, 3, 4, 5]))
+    console.log(second([1, 2, 3, 4, 5]));
 
     function second(input){
         return input[4];
     }
-    console.log(second([1, 2, 3, 4, 5]))
+    console.log(second([1, 2, 3, 4, 5]));
 
 //BONUS QUESTIONS
 

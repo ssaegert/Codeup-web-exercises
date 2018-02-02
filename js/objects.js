@@ -106,14 +106,6 @@
         }
     ];
 
-books.forEach(function(book, index){
-    console.log("book # " + index);
-    console.log("Title: " + book.title);
-    console.log("Author: " + book.author.firstName + " " + book.lastName);
-    console.log("---");
-});
-
-
 
     /**
      * TODO:
@@ -140,6 +132,28 @@ books.forEach(function(book, index){
      *      ...
      */
 
+    var newBookTitle = "LOTR: The Fellowship Of The Ring";
+    var newAuthorFirtName = "John";
+    var newAuthorLastName = "Tolkien";
+    function createBook(){
+        books.push ({
+            title: newBookTitle,
+            author: {
+                firstName: newAuthorFirtName,
+                lastName: newAuthorLastName
+            }
+        },)
+    }
+    createBook()
+    books.forEach(function(book, index){
+    console.log("book # " + (index + 1));
+    console.log("Title: " + book.title);
+    console.log("Author: " + book.author.firstName + " " + book.lastName);
+    console.log("---");
+    });
+
+
+
 
 
     /**
@@ -152,5 +166,8 @@ books.forEach(function(book, index){
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
+
 
 })();

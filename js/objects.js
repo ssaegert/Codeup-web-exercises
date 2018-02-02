@@ -144,7 +144,7 @@
             }
         },)
     }
-    createBook()
+    createBook();
     books.forEach(function(book, index){
     console.log("book # " + (index + 1));
     console.log("Title: " + book.title);

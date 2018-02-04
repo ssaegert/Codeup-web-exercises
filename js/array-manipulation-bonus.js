@@ -13,7 +13,7 @@
 var phoneNumber = prompt("What Is Your Phone Number");
 
 var phoneNumberArray = phoneNumber.split("");
-if (!isNaN(phoneNumberArray)){
+// if (parseInt(phoneNumberArray) == typeof('number')){
     if (phoneNumberArray.length === 7) {
         var firstThreeOfSeven = phoneNumberArray.slice(0, 3);
         var lastFourOfSeven = phoneNumberArray.slice(3);
@@ -30,9 +30,9 @@ if (!isNaN(phoneNumberArray)){
         var lastFourOfEleven = phoneNumberArray.slice(7);
         console.log(firstOneOfEleven.join("") + "-" + firstThreeOfEleven.join("") + "-" + secondThreeOfEleven.join("") + "-" + lastFourOfEleven.join(""));
     }
-} else {
-    alert("Not a valid number!");
-}
+// } else {
+//     alert("Not a valid number!");
+// }
 
 
 // BONUS 2:

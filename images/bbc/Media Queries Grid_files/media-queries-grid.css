@@ -1,0 +1,144 @@
+h1 {
+    text-align: center;
+    font-family: Avenir, sans-serif;
+    color: #24454c;
+    padding: 0.5em 0 0.5em 0;
+    margin: 0;
+}
+h2 {
+    color: #24454c;
+    padding: 0;
+    margin: 0;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3em;
+    background-color: #ccc;
+    list-style-type: none;
+    font-family: Avenir, sans-serif;
+    text-decoration: none;
+    font-weight: bolder;
+    border-radius: 3em;
+    margin-bottom: 1em;
+    border: 0.05em solid darkgray;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: cadetblue;
+}
+
+img {
+    width: 100%
+}
+.alert-info {
+    background-color: lightblue;
+    height: 3em;
+    border: 1px solid lightgray;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3em;
+    border-radius: 3em;
+}
+.main {
+    font-family: Avenir, sans-serif;
+}
+.sub-section {
+    font-family: Avenir, sans-serif;
+    font-style: italic;
+}
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row {
+    content: "";
+    clear: both;
+    box-sizing: border-box;
+}
+.col-xl,
+.col-lg,
+.col-md,
+.col-sm,
+.col-xs {
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    font-size: 1em;
+}
+.social-link {
+    width: 2em;
+    height: 2em;
+    float: right;
+    padding-left: 0.5em;
+    margin-top: .5em;
+}
+.social-media-links {
+    float: right;
+    box-sizing: border-box;
+}
+.copyright {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+@media screen and (min-width: 500px)  {
+    .alert-info { display: none; }
+    h1 { text-align: left;
+        font-family: Avenir, sans-serif;
+    }
+    li {
+        text-align: right;
+        vertical-align: middle;
+        line-height: 30px;
+        list-style-type: none;
+        background-color: #fff;
+        display: inline-block;
+        padding-left: 1em;
+        margin-bottom: 0;
+        border: none;
+    }
+    ul {
+        text-align: right;
+        padding: 1em 0 0 0;
+    }
+    .social-link img {
+        width: 60%
+    }
+    .social-link {
+        width: 5em;
+        height: 5em;
+        float: right;
+        padding-left: 0.5em;
+        margin-top: .5em;
+        text-align: right;
+    }
+    .col-xl,
+    .col-lg,
+    .col-md,
+    .col-sm,
+    .col-xs {
+        padding: 0 .5em 0 0;
+    }
+    .col-lg {
+        width: 50%;
+    }
+    .col-md {
+        width: 33.33%;
+    }
+    .col-sm {
+        width: 25%;
+    }
+    .col-xs {
+        width: 12.5%;
+    }
+}
+

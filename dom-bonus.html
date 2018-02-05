@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Bonus</title>
+</head>
+<body>
+<h1>Add To My List</h1>
+<ul class="my-list">
+
+</ul>
+
+<button id="add-to-list">ADD</button>
+<script>
+    var addItem;
+    function addPromt(){
+        addItem = prompt('Add any Item!');
+    }
+    var addAnItem = document.getElementById('add-to-list');
+    addAnItem.addEventListener('click', addPromt);
+    var addItemToDocument = document.getElementsByClassName('my-list');
+    console.log(addItemToDocument)
+
+</script>
+<!-- DOM BONUS
+Create a list maker that confirms with the user if they wish to add an entry to a list.
+If the user confirms, after each new entry, prompt the user for additional
+items and then add them to the HTML of the page. If the user confirms not to add another
+item, end the cycle of user dialogue functions and apply styling to the page using JS only. -->
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM EVENTS BONUS</title>
+</head>
+<body>
+<!-- BONUS Exercise:
+Create a stop watch app with the following features:
+1) stop watch display that shows the time to the nearest 100th of a second
+2) start button to start the stop watch
+3) reset button to reset the time to zero
+4) pause button to stop the stop watch
+Additional Features:
+1) store a list of times in an aside div that are appended to every time the reset button is hit
+2) add delete buttons for each stored time that removes the time from the aside div
+3) add keyboard events to control starting, pausing, and resetting -->
+
+<h1 id="time">0.00</h1>
+<button id="start">START</button>
+<button id="pause">PAUSE</button>
+<button id="reset">RESET</button>
+<script>
+var runningTime = 0;
+var interval = 10;
+
+// START TIMER
+
+
+// PAUSE TIMER
+
+function resetTimer() {
+    document.getElementById('time').innerHTML = "0";
+}
+var reset = document.getElementById('reset');
+reset.addEventListener('click', resetTimer);
+
+var startTimer = function (event) {
+    var intervalId = setInterval(function updateTimer() {
+        {
+            if (runningTime >= 0) {
+                document.getElementById('time').innerHTML = runningTime.toFixed(2);
+            }
+            runningTime += 0.01;
+        }
+    }, interval);
+
+    function pauseTimer() {
+        clearInterval(intervalId);
+    }
+    var pause = document.getElementById('pause');
+    pause.addEventListener('click', pauseTimer);
+
+}
+
+
+var start = document.getElementById('start');
+start.addEventListener('click', startTimer);
+
+
+</script>
+
+
+</body>
+</html>

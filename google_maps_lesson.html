@@ -6,8 +6,54 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Google Maps</title>
+    <style>
+        #map {
+            height: 500px;
+            width: 500px;
+            margin-top: 5em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
+<div id="map"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk_wK4b6pzV31r4HxJJlMvPMeVadFu4zE"></script>
 
+<!-- Script to show address on map -->
+<script type="text/javascript">
+    (function() {
+        "use strict";
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 15,
+
+            // This sets the center of the map at our location
+            center: {
+                lat:  29.4260,
+                lng: -98.4861
+            }
+        };
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+
+        var address = "12626 Blanco Rd. San Antonio, TX 78216";
+        // var address = prompt("What is your address?");
+
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({ "address": address }, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                map.setCenter(results[0].geometry.location);
+            } else {
+                alert("Geocoding was not successful - STATUS: " + status);
+            }
+        });
+
+    })();
+</script>
 </body>
 </html>

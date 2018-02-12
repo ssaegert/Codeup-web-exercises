@@ -6,10 +6,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>jQuery</title>
+    <link rel="stylesheet" href="css/jquery-execises.css">
 </head>
 <body>
-<h1>jQuery Execise</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi consequuntur error ipsum molestiae similique tempore. Aliquam, aliquid dolorum enim illo iure necessitatibus nobis, possimus quibusdam reprehenderit saepe soluta, voluptate.</p>
+<h1 id="main-title">jQuery Execise</h1>
+<ul>
+    <li class="codeup">List Item 1</li>
+    <li class="codeup">List Item 2</li>
+    <li>List Item 3</li>
+    <li class="codeup">List Item 4</li>
+</ul>
+<p class="main-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi consequuntur error ipsum molestiae similique tempore. Aliquam, aliquid dolorum enim illo iure necessitatibus nobis, possimus quibusdam reprehenderit saepe soluta, voluptate.</p>
+<div class="block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias, asperiores consequuntur dolore enim id inventore laboriosam minus natus officiis omnis placeat quos, ut vel voluptates. Itaque modi quod veniam.</div>
 
 
 <script src="js/jquery-2.2.4.js"></script>
@@ -17,7 +25,14 @@
     "use strict";
 
     $(document).ready(function() {
-        alert( 'The DOM has finished loading!' );
+        // alert( 'The DOM has finished loading!' );
+        // var contents = $('#main-title').html();
+        // alert(contents);
+        // $('.codeup').css('border', '1px solid red');
+        // $('h1, p').css('background-color', '#ffffe5');
+        $('h1, p, li').css('background-color', '#f0fff0');
+        var contents = $('#main-title').html();
+        alert(contents);
     });
 </script>
 </body>

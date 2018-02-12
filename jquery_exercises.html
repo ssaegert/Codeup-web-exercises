@@ -13,12 +13,12 @@
 <ul>
     <li class="codeup">List Item 1</li>
     <li class="codeup">List Item 2</li>
-    <li>List Item 3</li>
+    <li class="codeup">List Item 3</li>
     <li class="codeup">List Item 4</li>
 </ul>
 <p class="main-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi consequuntur error ipsum molestiae similique tempore. Aliquam, aliquid dolorum enim illo iure necessitatibus nobis, possimus quibusdam reprehenderit saepe soluta, voluptate.</p>
 <div class="block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias, asperiores consequuntur dolore enim id inventore laboriosam minus natus officiis omnis placeat quos, ut vel voluptates. Itaque modi quod veniam.</div>
-
+<p class="main-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi consequuntur error ipsum molestiae similique tempore. Aliquam, aliquid dolorum enim illo iure necessitatibus nobis, possimus quibusdam reprehenderit saepe soluta, voluptate.</p>
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
@@ -30,9 +30,24 @@
         // alert(contents);
         // $('.codeup').css('border', '1px solid red');
         // $('h1, p').css('background-color', '#ffffe5');
-        $('h1, p, li').css('background-color', '#f0fff0');
-        var contents = $('#main-title').html();
-        alert(contents);
+        // $('li').css('font-size', '20px');
+        // $('h1, p, li').css('background-color', '#f0fff0');
+        // var contents = $('#main-title').html();
+        // alert(contents);
+        $('#main-title').click(function() {
+            $(this).css('background-color', 'blue');
+        });
+        $('.main-paragraph').dblclick(function() {
+            $('.main-paragraph').css('font-size', '18px');
+        });
+        $('.codeup').hover(
+            function() {
+                $(this).css('color', 'red');
+            },
+            function() {
+                $(this).css('color', '#000');
+            }
+        );
     });
 </script>
 </body>

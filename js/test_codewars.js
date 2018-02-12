@@ -158,39 +158,87 @@
 // });
 
 
-function whoIsPaying(name){
-    var nameArray = (name.toString()).split("");
-    return (nameArray[0] + nameArray[1]).toString
-}
-
-
-function whoIsPaying(name){
-    var nameArray = (name.toString()).split("");
-    // if (nameArray.length > 2)
-    return (nameArray[0] + nameArray[1]).toString
-}
+// function whoIsPaying(name){
+//     var nameArray = (name.toString()).split("");
+//     return (nameArray[0] + nameArray[1]).toString
+// }
+//
+//
+// function whoIsPaying(name){
+//     var nameArray = (name.toString()).split("");
+//     // if (nameArray.length > 2)
+//     return (nameArray[0] + nameArray[1]).toString
+// }
 
 
 
 //---------------
 
 
+//
+// function century(year) {
+//     var yearArray = (year.toString()).split("");
+//     if (yearArray.length = 4) {
+//         if (parseInt(yearArray[2] + yearArray[3]) > 0) {
+//             return (parseInt(yearArray[0] + yearArray[1])) + 1
+//         } else {
+//             return parseInt(yearArray[0] + yearArray[1])
+//         }
+//     } else if (yearArray.length = 3) {
+//         if (parseInt(yearArray[1] + yearArray[2]) > 0) {
+//             return (parseInt(yearArray[0])) + 1
+//         } else {
+//             return parseInt(yearArray[0])
+//         }
+//     } else if (yearArray.length = 2) {
+//         return 1
+//     }
+// }
 
-function century(year) {
-    var yearArray = (year.toString()).split("");
-    if (yearArray.length = 4) {
-        if (parseInt(yearArray[2] + yearArray[3]) > 0) {
-            return (parseInt(yearArray[0] + yearArray[1])) + 1
-        } else {
-            return parseInt(yearArray[0] + yearArray[1])
-        }
-    } else if (yearArray.length = 3) {
-        if (parseInt(yearArray[1] + yearArray[2]) > 0) {
-            return (parseInt(yearArray[0])) + 1
-        } else {
-            return parseInt(yearArray[0])
-        }
-    } else if (yearArray.length = 2) {
-        return 1
-    }
+//---------------
+//
+// Create a function that returns the name of the winner in a fight between two fighters.
+//
+//     Each fighter takes turns attacking the other and whoever kills the other first is victorious. Death is defined as having health <= 0.
+//
+// Each fighter will be a Fighter object/instance. See the Fighter class below in your chosen language.
+//
+//     Both health and damagePerAttack (damage_per_attack for python) will be integers larger than 0. You can mutate the Fighter objects.
+//
+// ##Example:
+// declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew") => "Lew"
+//
+// // Python
+// declare_winner(Fighter("Lew", 10, 2), Fighter("Harry", 5, 4), "Lew") => "Lew"
+//
+// Lew attacks Harry; Harry now has 3 health.
+//     Harry attacks Lew; Lew now has 6 health.
+//     Lew attacks Harry; Harry now has 1 health.
+//     Harry attacks Lew; Lew now has 2 health.
+//     Lew attacks Harry: Harry now has -1 health and is dead. Lew wins.
+// function Fighter(name, health, damagePerAttack) {
+//     this.name = name;
+//     this.health = health;
+//     this.damagePerAttack = damagePerAttack;
+//     this.toString = function() { return this.name; }
+
+// ##Example Tests:
+// Test.describe("Example Test Cases", function(){
+//
+//     Test.assertEquals(declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew"), "Lew");
+//
+//     Test.assertEquals(declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Harry"), "Harry");
+//
+//     Test.assertEquals(declareWinner(new Fighter("Harald", 20, 5), new Fighter("Harry", 5, 4), "Harry"), "Harald")
+//
+//     Test.assertEquals(declareWinner(new Fighter("Harald", 20, 5), new Fighter("Harry", 5, 4), "Harald"), "Harald")
+//
+//     Test.assertEquals(declareWinner(new Fighter("Jerry", 30, 3), new Fighter("Harald", 20, 5), "Jerry"), "Harald")
+//
+//     Test.assertEquals(declareWinner(new Fighter("Jerry", 30, 3), new Fighter("Harald", 20, 5), "Harald"), "Harald")
+//
+// });
+
+function declareWinner(fighter1, fighter2, firstAttacker) {
+    return "Write your code here";
 }

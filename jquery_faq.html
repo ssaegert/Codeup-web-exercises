@@ -133,7 +133,7 @@
 
         $('li').click(function(event) {
             event.preventDefault();
-            $(this).parent().children('li').first().toggleClass('blue-li');
+            $(this).parent().children().first().toggleClass('blue-li');
         });
 
     });

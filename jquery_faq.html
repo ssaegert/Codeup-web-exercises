@@ -10,11 +10,30 @@
         .invisible {
             display: none;
         }
+        dt {
+            font-family: Avenir, sans-serif;
+            font-size: 1.5em;
+            color: #666;
+            font-weight: bold;
+        }
+        dd {
+            font-family: Avenir, sans-serif;
+            background-color: #ccc;
+            padding: .5em;
+            margin-bottom: 2em;
+        }
+        button {
+            background-color: #999;
+            color: white;
+            font-size: 1.5em;
+            font-family: Avenir, sans-serif;
+            border-radius: .5em;
+        }
     </style>
 </head>
 <body>
 
-
+<button>Show Answers</button>
 <dl>
 
     <dt>How did Yellowstone get its name?</dt>
@@ -58,7 +77,7 @@
     $(document).ready(function() {
         "use strict";
         $('dd').addClass('invisible');
-        $('dt').dblclick(function(event) {
+        $('button').click(function(event) {
             event.preventDefault();
             $('dd').toggleClass('invisible');
         });

@@ -25,34 +25,36 @@
 <div class="code-winner"></div>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
-    "use strict";
-    var checkArray = [];
-    var checkArrayString;
-    var cheatCode = "38,38,40,40,37,39,37,39,66,65,13";
+    $(document).ready(function() {
+        "use strict";
+        var checkArray = [];
+        var checkArrayString;
+        var cheatCode = "38,38,40,40,37,39,37,39,66,65,13";
 
-    $(document).keyup(function(event){
-        checkArray.push(event.keyCode);
+        $(document).keyup(function(event){
+            checkArray.push(event.keyCode);
 
-        if (event.keyCode == 13){
-            var gifNumber = "<img src=\"images/code-winner-" + (Math.floor(Math.random() * 6) + 1) + ".gif\">";
-            var gifNumberLoser = "<img src=\"images/code-loser-" + (Math.floor(Math.random() * 6) + 1) + ".gif\">";
+            if (event.keyCode == 13){
+                var gifNumber = "<img src=\"images/code-winner-" + (Math.floor(Math.random() * 6) + 1) + ".gif\">";
+                var gifNumberLoser = "<img src=\"images/code-loser-" + (Math.floor(Math.random() * 6) + 1) + ".gif\">";
 
-            checkArrayString = checkArray.toString();
-            console.log(checkArrayString);
+                checkArrayString = checkArray.toString();
+                console.log(checkArrayString);
 
-            if (checkArrayString === cheatCode) {
-                console.log('yay');
-                $('h1').text('Winner! Winner! Winner! Winner! 100 LIVES FOR YOU!');
-                $('h1').css('text-shadow', '0 0 2em #000');
-                $('.code-winner').html(gifNumber);
-                checkArray = [];
-            } else {
-                $('h1').text('Wrong code! You start with zero lives... I guess you don\'t even start... cus you know... zero lives');
-                $('h1').css('text-shadow', '0 0 2em #000');
-                $('.code-winner').html(gifNumberLoser);
-                checkArray = [];
+                if (checkArrayString === cheatCode) {
+                    console.log('yay');
+                    $('h1').text('Winner! Winner! Winner! Winner! 100 LIVES FOR YOU!');
+                    $('h1').css('text-shadow', '0 0 2em #000');
+                    $('.code-winner').html(gifNumber);
+                    checkArray = [];
+                } else {
+                    $('h1').text('Wrong code! You start with zero lives... I guess you don\'t even start... cus you know... zero lives');
+                    $('h1').css('text-shadow', '0 0 2em #000');
+                    $('.code-winner').html(gifNumberLoser);
+                    checkArray = [];
+                }
             }
-        }
+        });
     });
 </script>
 </body>

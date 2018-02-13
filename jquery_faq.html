@@ -29,11 +29,20 @@
             font-family: Avenir, sans-serif;
             border-radius: .5em;
         }
+        .highlight-last-li {
+            background-color: #ccc;
+        }
+        .bold-lis {
+            font-weight: bold;
+        }
+        .blue-li {
+            color: blue;
+        }
     </style>
 </head>
 <body>
 
-<button>Show Answers</button>
+<button class="dd-toggle">Show Answers</button>
 <dl>
 
     <dt>How did Yellowstone get its name?</dt>
@@ -67,6 +76,34 @@
     <dd>Think of the Continental Divide as the crest of the continent. Theoretically, when precipitation falls on the west side of the Divide, it eventually reaches the Pacific Ocean. When it falls on the east side of the Divide, it eventually reaches the Atlantic Ocean. In Yellowstone (as elsewhere), this ridgeline is not straight. You cross the Continental Divide three times between the South Entrance and the Old Faithful area. Craig Pass is the highest crossing, at 8,262 feet.</dd>
 </dl>
 
+<h1>National Parks</h1>
+<button class="toggle-last-li">Highlight Last li</button>
+<h3>State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+
+<h3>State Parks of Florida</h3>
+<ul id="state-parks-texas">
+    <li>Aligators</li>
+    <li>Floridians</li>
+    <li>Pickachu</li>
+    <li>Fondant Fountains</li>
+    <li>Pinball</li>
+</ul>
+
+<h3>State Parks of Misouri</h3>
+<ul id="state-parks-texas">
+    <li>Merle Haggard</li>
+    <li>Wild Zambonis</li>
+    <li>Spare Gum</li>
+    <li>No Floridians</li>
+    <li>Singing Bass</li>
+</ul>
 
 
     <!-- Other terms and descriptions -->
@@ -77,11 +114,35 @@
     $(document).ready(function() {
         "use strict";
         $('dd').addClass('invisible');
-        $('button').click(function(event) {
+
+        $('.dd-toggle').click(function(event) {
             event.preventDefault();
             $('dd').toggleClass('invisible');
         });
+
+
+        $('.toggle-last-li').click(function(event) {
+            event.preventDefault();
+            $( "ul li:last-child" ).toggleClass('highlight-last-li');
+        });
+
+        $('h3').click(function(event) {
+            event.preventDefault();
+            $(this).next().toggleClass('bold-lis');
+        });
+
+        $('li').click(function(event) {
+            event.preventDefault();
+            $(this).parent().children('li').first().toggleClass('blue-li');
+        });
+
     });
+
+</script>
+
+<script>
+
+
 </script>
 </body>
 </html>

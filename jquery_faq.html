@@ -38,9 +38,75 @@
         .blue-li {
             color: blue;
         }
+        .sign-up {
+            border: .25em solid lightgray;
+            width: 100%;
+            clear: both;
+            height: 5em;
+            margin-bottom: 1em;
+        }
+        .newsletter {
+            width: 50%;
+            color: darkblue;
+            float: left;
+            margin-left: .5em;
+        }
+        .close-sign-up {
+            width: 1.2em;
+            height: 1.2em;
+            font-size: 2em;
+            color: black;
+            float: left;
+            border: .1em solid lightgray;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 1.2em;
+            margin-top: .5em;
+        }
+        .park-info {
+            display: none;
+        }
+        footer {
+            background-color: lightgray;
+            width: 100%;
+            height: 2em;
+            margin-top: 2em;
+        }
+        .register {
+            border: .25em solid lightgray;
+            width: 100%;
+            clear: both;
+            height: 5em;
+            margin-bottom: 1em;
+            display: none;
+        }
+        .register-title {
+            width: 50%;
+            color: darkblue;
+            float: left;
+            margin-left: .5em;
+            font-size: 2em;
+            line-height: .6em;
+        }
+        .register-button {
+            font-family: Avenir, sans-serif;
+            background-color: #ccc;
+            padding: 0.5em;
+            margin-bottom: 2em;
+            margin-top: 0.5em;
+        }
+        .spacer {
+            width: 100%;
+            clear: both;
+            height: 6.5em;
+        }
+
+
     </style>
 </head>
 <body>
+<div class="sign-up"><h1 class="newsletter">Would you like to sign up for our newsletter?</h1><span class="close-sign-up">X</span></div>
+<div class="spacer"><div class="register"><h2 class="register-title">Register for our site</h2><button class="register-button">REGISTER</button></div></div>
 
 <button class="dd-toggle">Show Answers</button>
 <dl>
@@ -78,8 +144,8 @@
 
 <h1>National Parks</h1>
 <button class="toggle-last-li">Highlight Last li</button>
-<h3>State Parks of Texas</h3>
-<ul id="state-parks-texas">
+<h3 class="park-titles">State Parks of Texas</h3>
+<ul class="park-info">
     <li>Abilene</li>
     <li>Big Bend</li>
     <li>Choke Canyon</li>
@@ -87,8 +153,8 @@
     <li>Enchanted Rock</li>
 </ul>
 
-<h3>State Parks of Florida</h3>
-<ul id="state-parks-texas">
+<h3 class="park-titles">State Parks of Florida</h3>
+<ul class="park-info">
     <li>Aligators</li>
     <li>Floridians</li>
     <li>Pickachu</li>
@@ -96,15 +162,15 @@
     <li>Pinball</li>
 </ul>
 
-<h3>State Parks of Misouri</h3>
-<ul id="state-parks-texas">
+<h3 class="park-titles">State Parks of Misouri</h3>
+<ul class="park-info">
     <li>Merle Haggard</li>
     <li>Wild Zambonis</li>
     <li>Spare Gum</li>
     <li>No Floridians</li>
     <li>Singing Bass</li>
 </ul>
-
+<footer></footer>
 
     <!-- Other terms and descriptions -->
 
@@ -128,7 +194,8 @@
 
         $('h3').click(function(event) {
             event.preventDefault();
-            $(this).next().toggleClass('bold-lis');
+            // $(this).next().toggleClass('bold-lis');
+            $(this).next().slideToggle(500)
         });
 
         $('li').click(function(event) {
@@ -136,12 +203,14 @@
             $(this).parent().children().first().toggleClass('blue-li');
         });
 
+        $('.close-sign-up').click(function(event) {
+            event.preventDefault();
+            $('.sign-up').hide();
+        });
+
+        $('.register').delay(8000).fadeIn(400);
+
     });
-
-</script>
-
-<script>
-
 
 </script>
 </body>

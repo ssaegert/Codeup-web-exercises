@@ -6,107 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>National Parks</title>
-    <style>
-        .invisible {
-            display: none;
-        }
-        dt {
-            font-family: Avenir, sans-serif;
-            font-size: 1.5em;
-            color: #666;
-            font-weight: bold;
-        }
-        dd {
-            font-family: Avenir, sans-serif;
-            background-color: #ccc;
-            padding: .5em;
-            margin-bottom: 2em;
-        }
-        button {
-            background-color: #999;
-            color: white;
-            font-size: 1.5em;
-            font-family: Avenir, sans-serif;
-            border-radius: .5em;
-        }
-        .highlight-last-li {
-            background-color: #ccc;
-        }
-        .bold-lis {
-            font-weight: bold;
-        }
-        .blue-li {
-            color: blue;
-        }
-        .sign-up {
-            border: .25em solid lightgray;
-            width: 100%;
-            clear: both;
-            height: 5em;
-            margin-bottom: 1em;
-        }
-        .newsletter {
-            width: 50%;
-            color: darkblue;
-            float: left;
-            margin-left: .5em;
-        }
-        .close-sign-up {
-            width: 1.2em;
-            height: 1.2em;
-            font-size: 2em;
-            color: black;
-            float: left;
-            border: .1em solid lightgray;
-            text-align: center;
-            vertical-align: middle;
-            line-height: 1.2em;
-            margin-top: .5em;
-        }
-        .park-info {
-            display: none;
-        }
-        footer {
-            background-color: lightgray;
-            width: 100%;
-            height: 2em;
-            margin-top: 2em;
-        }
-        .register {
-            border: .25em solid lightgray;
-            width: 100%;
-            clear: both;
-            height: 5em;
-            margin-bottom: 1em;
-            display: none;
-        }
-        .register-title {
-            width: 50%;
-            color: darkblue;
-            float: left;
-            margin-left: .5em;
-            font-size: 2em;
-            line-height: .6em;
-        }
-        .register-button {
-            font-family: Avenir, sans-serif;
-            background-color: #ccc;
-            padding: 0.5em;
-            margin-bottom: 2em;
-            margin-top: 0.5em;
-        }
-        .spacer {
-            width: 100%;
-            clear: both;
-            height: 6.5em;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/jquery_faq.css">
 </head>
 <body>
 <div class="sign-up"><h1 class="newsletter">Would you like to sign up for our newsletter?</h1><span class="close-sign-up">X</span></div>
-<div class="spacer"><div class="register"><h2 class="register-title">Register for our site</h2><button class="register-button">REGISTER</button></div></div>
+<div class="spacer">
+    <div class="alert alert-success" role="alert"><strong>Awesome!</strong> Thank you for registering!</div>
+    <div class="register"><h2 class="register-title">Register for our site</h2><button class="register-button">REGISTER</button></div>
+</div>
 
 <button class="dd-toggle">Show Answers</button>
 <dl>
@@ -173,7 +81,8 @@
 <footer></footer>
 
     <!-- Other terms and descriptions -->
-
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-2.2.4.min.js"></script>
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
@@ -210,6 +119,11 @@
 
         $('.register').delay(8000).fadeIn(400);
 
+        $('.register-button').click(function(event) {
+            event.preventDefault();
+            $('.register').hide();
+            $('.alert').show();
+        });
     });
 
 </script>

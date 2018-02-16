@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+    <style>
+        .tableCell {
+            color: blue;
+            width: 8vw;
+            text-align: left;
+            padding: 1em;
+            margin: 0;
+            /*border: .1em solid #999;*/
+
+        }
+        .row-style {
+            background-color: #ddd;
+            border: .1em solid #999;
+
+        }
+    </style>
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead class="info">
+    <tr>
+        <th>Tool</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
+    </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+<script src="js/jquery-ajax-store.js"></script>
+<!--<script src="js/bootstrap.min.js"></script>-->
+<!--<script src="js/jquery-2.2.4.min.js"></script>-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+
+<script>
+
+    (function() {
+        "use strict";
+        // TODO: Create an ajax GET request for /data/inventory.json
+        // $.ajax("./data/inventory.json").done(function(responseData){
+        //     tools = responseData;
+        //     console.log(tools)
+        // });
+
+        var fullData = $.ajax("./data/inventory.json");
+        fullData.fail(function(jqXhr, status, error) {
+            console.log("Error");
+            console.log("Error is " + error);
+            console.log("Status " + status);
+        });
+        fullData.done(function(data) {
+            data.forEach(function(tool) {
+                var htmlString = "";
+                htmlString += "<tr class='row-style'>";
+                htmlString += "<td class='tableCell'>" + tool.title + "</td>";
+                htmlString += "<td class='tableCell'>" + tool.quantity + "</td>";
+                htmlString += "<td class='tableCell'>$" + tool.price + "</td>";
+                htmlString += "<td class='tableCell'>" + tool.categories + "</td>";
+                htmlString += "</tr>";
+                $(".info").append(htmlString);
+            });
+        });
+
+        $('th').addClass('tableCell');
+        // TODO: Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+        // $('tr').click(function(event) {
+        //     event.preventDefault();
+        //     $(this).parent().children().first().toggleClass('blue-li');
+        // });
+
+    })();
+</script>
+
+</body>
+</html>

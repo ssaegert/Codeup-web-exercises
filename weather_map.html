@@ -12,77 +12,24 @@
 <main>
 
   <div class="weather-wrap">
-      <h1>Weather Application</h1>
-      <h2>San Antonio</h2>
+      <h1 class="main-title">Weather Application</h1>
+      <h2 id="city-weather"></h2>
+      <form id="weather-form">
+          <span>Enter a Latitude and Longitude</span>
+          <input type="text" id="latitude" name="latitude" placeholder="Latitude">
+          <input type="text" id="longitude" name="longitude" placeholder="Longitude">
+          <input type="submit" value="Submit" id="ll-submit">
+      </form>
       <div id="current-forecast"></div>
-      <!--<div class="weather-module"></div>-->
-      <!--<div class="weather-module"></div>-->
-      <!--<div class="weather-module"></div>-->
   </div>
 
+    <!--<input onclick="clearMarkers();" type=button value="Hide Markers">-->
+    <!--<input onclick="showMarkers();" type=button value="Show All Markers">-->
+    <input onclick="deleteMarkers();" type=button value="Clear All Markers">
+    <div id="map"></div>
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-<script>
-    // $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
-    //     APPID: "6b39ba7f261b18c838abccbbdd423f34",
-    //     lat:    29.423017,
-    //     lon:   -98.48527,
-    //     units: "imperial"
-    // }).done(function(data) {
-    //     console.log(data);
-    // });api.openweathermap.org/data/2.5/forecast
-    var currentWeather = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
-            // APPID: "6b39ba7f261b18c838abccbbdd423f34",
-            APPID: "7f8e3aa0aad113510e0c1eaafd1c17b8",
-            lat: 29.423017,
-            lon: -98.48527,
-            units: "imperial"
-        }).done(function(data) {
-            console.log(data);
-        for (i = 0; i < 3; i++) {
-            var htmlString = "";
-            htmlString += "<div class=\"weather-module\">";
-            htmlString += "<h1>" + data.list[i].temp.max + " °/ " + data.list[i].temp.min + "°</h1>";
-            htmlString += "<img src=\'http://openweathermap.org/img/w/" + data.list[i].weather["0"].icon + ".png\'><br>";
-            htmlString += "<strong>Clouds: </strong>" + data.list[i].weather["0"].description;
-            htmlString += "<br><strong>Humidity: </strong>" + data.list[i].humidity;
-            htmlString += "<br><strong>Wind: </strong>" + data.list[i].speed;
-            htmlString += "<br><strong>pressure: </strong>" + data.list[i].pressure;
-            htmlString += "</div>";
-            $("#current-forecast").append(htmlString);
-        }
-            // var htmlString = "";
-            // htmlString += "<div class=\"weather-module\">";
-            // htmlString += "<h1>" + data.list["0"].temp.max + " °/ " + data.list["0"].temp.min + "°</h1>";
-            // htmlString += "<img src=\'http://openweathermap.org/img/w/" + data.list["0"].weather["0"].icon + ".png\'><br>";
-            // htmlString += "<strong>Clouds: </strong>" + data.list["0"].weather["0"].description;
-            // htmlString += "<br><strong>Humidity: </strong>" + data.list["0"].humidity;
-            // htmlString += "<br><strong>Wind: </strong>" + data.list["0"].speed;
-            // htmlString += "<br><strong>pressure: </strong>" + data.list["0"].pressure;
-            // htmlString += "</div>";
-            // $("#current-forecast").append(htmlString);
-        });
-
-
-
-    // console.log(currentWeather);
-    // console.log(currentWeather.main.temp);
-
-    // currentWeather.done(function(data) {
-    //     var htmlString = "";
-    //     htmlString += "<div class=\"weather-module\">";
-    //     htmlString += data.responseJSON.main.temp;
-    //     htmlString += "</div>";
-    //     $("#current-forecast").append(htmlString);
-    // });
-        // var data = $.get("http://api.openweathermap.org/data/2.5/forecast", {
-    //         APPID: "6b39ba7f261b18c838abccbbdd423f34",
-    //         lat: 29.423017,
-    //         lon: -98.48527,
-    //         units: "imperial"
-    //     });
-
-</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk_wK4b6pzV31r4HxJJlMvPMeVadFu4zE"></script>
+<script src="js/weather-map.js"></script>
 </body>
 </html>

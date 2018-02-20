@@ -92,18 +92,18 @@ Replace the generic marker icon with an image that is more appropriate for each 
     getInfo.forEach(function(element) {
 
         var geocoder = new google.maps.Geocoder();
-        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-        var icons = {
-            parking: {
-                icon: iconBase + 'restaurant_maps.png'
-            },
-            library: {
-                icon: iconBase + 'library_maps.png'
-            },
-            info: {
-                icon: iconBase + 'info-i_maps.png'
-            }
-        };
+        // var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        // var icons = {
+        //     parking: {
+        //         icon: iconBase + 'restaurant_maps.png'
+        //     },
+        //     library: {
+        //         icon: iconBase + 'library_maps.png'
+        //     },
+        //     info: {
+        //         icon: iconBase + 'info-i_maps.png'
+        //     }
+        // };
         geocoder.geocode({"address": element.address}, function (results, status) {
 
             if (status == google.maps.GeocoderStatus.OK) {
@@ -113,8 +113,8 @@ Replace the generic marker icon with an image that is more appropriate for each 
                     map: map,
                     title: element.address,
                     animation: google.maps.Animation.DROP,
-                    type: 'library',
-                    icon: icons[feature.type].icon
+                    // type: 'library',
+                    // icon: icons[feature.type].icon
                 });
                 var infowindow = new google.maps.InfoWindow({
                     content: element.infowindow
@@ -123,6 +123,7 @@ Replace the generic marker icon with an image that is more appropriate for each 
                 marker.addListener("click", function () {
                     infowindow.open(map, marker)
                 });
+                console.log();
             } else {
                 alert("Geocoding was not successful - STATUS: " + status);
             }
